@@ -2,18 +2,41 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
-    <button id="complimentButton">Get a compliment</button>
-    <button id="fortuneButton">Get a fortune</button>
-    <input
-      type="text"
-      id="goal"
-      placeholder="Write a personal goal"/>
-
-
+    <header>
+      <div id="onPageTitle">
+        <h1>04 Week Assessment: Back End</h1>
+      </div>
+    </header>
+    <div id="mainArea">
+      <section id="sidebar">
+        <div id="givenFeatures">
+          <button id="complimentButton">Get a compliment</button>
+          <button id="fortuneButton">Get a fortune</button>
+        </div>
+        <div id="addedFeatures">
+          <button id="showAll">Show All Items</button>
+          <div id="submitFeature">
+            <lable>Just type something:</lable>
+            <input type="text" id="itemEntry" placeholder="Gobbledygook">
+            <button id="submitBtn">Submit</button>
+          </div>
+        </div>
+      </section>
+      <section id="responseArea">
+          <ul>
+            <li>GET with the Show All Button</li>
+            <li>POST with the Submit</li>
+            <li>DELETE with the Remove button</li>
+          </ul>
+      </section>
+    </div>
+    <footer>
+    </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="index.js">
+    <script src="main.js">
     </script>
   </body>
 </html>

@@ -1,0 +1,156 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+body {
+
+    background-image: url("https://images.unsplash.com/photo-1487235829740-e0ac5a286e1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2068&q=80");
+    background-color: black;
+    background-size: 150vw;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(62, 0, 90);
+    border-radius: 10px;
+    border: 1px solid rgb(100, 0, 104);
+    filter: drop-shadow(2px 2px 3px rgb(99, 0, 69));
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer {
+    /* background-image: ; */
+    height: 15vh;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+header {
+    height: 15vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+#addedFeatures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 42vh;
+    width: 20vw;
+    margin: 20px 0px 0px 0px;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 25px;    
+}
+
+
+#givenFeatures {
+    width: 20vw;
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 25px;    
+}
+
+#itemEntry {
+    height:35px;
+    width: 190px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(97, 31, 160);
+}
+
+#mainArea {
+    display: flex;
+    flex-direction: row;
+}
+
+#responseArea {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+    height: 80vh;
+}
+
+#submitFeature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submitFeature > lable {
+    height: 30px;
+    font-size: 20px;
+    margin: 3px;;
+}
+
+
+.listItem {
+    width: 50vw;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, .6);
+    border: 1px solid rgb(100, 0, 104);
+    border-radius: 20px 0px 0px 20px;
+
+}
+
+.listItem p {
+    position: relative;
+    left: 30px;
+}
+
+.removeBtn {
+    width: 125px;
+    height: 60px;
+    background-color: rgb(62, 0, 90);
+    border-radius: 0px 20px 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    right: -30px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: rgb(221, 185, 255);
+    opacity: 1;
+}
