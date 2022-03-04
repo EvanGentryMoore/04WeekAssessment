@@ -27,7 +27,7 @@ getCompliment.onclick = function () {
 };
 
 getFortune.onclick = function () {
-    axios.get(`${base}fourtunes`)
+    axios.get(`${base}fortunes`)
         .then(function (response) {
           const data = response.data;
           alert(data);
@@ -45,17 +45,29 @@ submitBtn.onclick = function (e) {
   e.preventDefault();
   let newItem = {item: itemEntry.value}
   if(newItem.item.length !== 0){
-  axios.post(`${base}item`, newItem)
-  .then(res => buildList(res.data))
-  .catch(err => console.log(err));
+    axios.post(`${base}item`, newItem)
+    .then(res => buildList(res.data))
+    .catch(err => console.log(err));
+  }
+  itemEntry.value = "";
+};
+
+itemEntry.onkeyup = function (e) {
+  e.preventDefault();
+  if(e.key === 'Enter'){
+    let newItem = {item: itemEntry.value}
+    if(newItem.item.length !== 0){
+      axios.post(`${base}item`, newItem)
+      .then(res => buildList(res.data))
+      .catch(err => console.log(err));
+    }
+    itemEntry.value = ""
   }
 };
 
 function removeItem (id) {
-  // e.preventDefault();
   axios.delete(`${base}item/${id}`)
   .then(res => {
-    // console.log('poop')
     buildList(res.data)
   })
   .catch(err => console.log(err))
@@ -75,3 +87,4 @@ function buildList(resData){
     responseArea.appendChild(listItem);
   })
 }
+
